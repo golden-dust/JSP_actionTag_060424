@@ -12,6 +12,7 @@
 	<%
 		String mid = request.getParameter("memberId");
 		String mpw = request.getParameter("memberPw");
+		String mdate = request.getParameter("date");
 	%>
 	
 	forward.jsp에서 넘겨받은 아이디는 <%= mid %>이고, 비밀번호는 <%= mpw %>입니다.
@@ -20,6 +21,7 @@
 	
 	%>
 	<hr>
-	현재 날짜와 시간: <%= date.toLocaleString() %>
+	현재 날짜와 시간: <%= mdate %>
+	<!-- 현재 날짜와 시간: <%= request.getParameter("date") %> -->
 </body>
 </html>
